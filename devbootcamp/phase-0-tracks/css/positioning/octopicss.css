@@ -1,0 +1,33 @@
+
+.glasses{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        bottom: 100px
+        z-index: -1;
+         margin:18.5% 52% 81.5%;
+    }
+
+.hat {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+     margin:6% 49% 94%;
+     z-index: 1
+     
+}
+
+.octopus {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: -1;
+    margin:11% 50% 89%;
+    
+    
+
+}
+
+
+
