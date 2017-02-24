@@ -30,27 +30,32 @@ interior_designer["decour_theme"] = decour_theme
 
 #here are your responses
 p interior_designer
+puts "Type the name of the response you want to change, or type done"
+  which_one = gets.chomp
+      if which_one == "done"
+        puts "ok goodbye now"
 
-puts "do you want to change any of your responses"
-responses = gets.chomp
-if responses = "yes" then
- puts "type which one?"
-  responses2 = gets.chomp
- if responses2 = "name " then
-     puts "what is your name"
+      elsif which_one == "name"
+      puts "what is your name"
       name = gets.chomp
-    interior_designer["name"] = name
+      interior_designer["name"] = name
 
-  elsif responses2= "age"
-      age = gets.chomp
-      age_int = age.to_i
-      interior_designer["age_int"] = age
-  elsif responses2 = "children"
-      children = gets.chomp
+
+     elsif which_one == "age"
+        puts "what is your age"
+        age = gets.chomp
+    interior_designer["age_int"] = age
+
+
+    elsif which_one == "children"
+        puts "how many children do you have"
+        children = gets.chomp
       interior_designer["children"] = children
-  elsif responses2  = "decour_theme"
-      interior_designer["decour_theme"] = decour_theme
-else
-  puts "ok goodbye now"
+
+     elsif which_one == "decour theme"
+         puts "what's your decour"
+         interior_designer["decour_theme"] = decour_theme
+
+
 end
-end 
+p interior_designer
