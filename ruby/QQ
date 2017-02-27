@@ -5,17 +5,12 @@ index_decrypt = 0
 proper_input = 0
 decoded_password = ""
 name = ""
-secret_name_array = [
 
-    ]
 
 #Method definition
 
 def namescrambler(index_decrypt, name, decoded_password )
 
- secret_name_array = [
-
-    ]
     puts "what is your name"
     name = gets.chomp
     name_array = name.split
@@ -144,27 +139,27 @@ def namescrambler(index_decrypt, name, decoded_password )
         elsif letter_number_letter == "Z"
         letter_number_letter = "A"
       end
-
+     
       #add the letter to the password
       decoded_password += letter_number_letter
       #swerve infinite loop
       index_decrypt +=1
+
     end
 
        puts " #{name}  is #{decoded_password}"
 
-  secret_name_array.unshift(decoded_password.split(","))
-  p secret_name_array
- p  secret_name_array.length
+    secret_name_array = decoded_password.split(",")
 
+    p secret_name_array
 end
 
 
 begin
-
 namescrambler(index_decrypt, name, decoded_password )
 
   puts "Do you want to do that again? If so type anything except 'Y' ?"
   answer = gets.chomp
 end while answer == 'Y'
- p  secret_name_array.length
+
+p secret_name_array
