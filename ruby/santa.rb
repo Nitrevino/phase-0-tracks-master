@@ -2,12 +2,11 @@ class Santa
   attr_reader :ethnicity
   attr_accessor :gender, :age
 
-    @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-    @age = 0
-
  def initialize (gender, ethnicity)
     @gender = gender
     @ethnicity = ethnicity
+        @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
+    @age = 0
   end
 
   def eat_milk_and_cookies(cookie)
@@ -52,6 +51,8 @@ santas_int.times do |i|
   example_genders.shuffle
   example_ethnicities.shuffle
   santas << Santa.new(example_genders[i], example_ethnicities[i])
+  santas.each { |santa| santa.age = rand(1..140) }
+
 end
 
 
