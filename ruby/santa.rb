@@ -18,9 +18,6 @@ class Santa
   def speak
     puts "Ho, ho, ho! Haaaappy holidays!"
   end
-
-
-
   def celebrate_birthday
      @age =+ 1
   end
@@ -28,9 +25,6 @@ class Santa
   def get_mad_at
       @reindeer_ranking.push!(reindeer)
   end
-
-
-
   def about
     puts "gender #{@gender}"
     puts " ethnicity #{@ethnicity}"
