@@ -13,21 +13,23 @@ class WordGame
         @too_many=false
         time=0
 
-  def initialize
-      puts "welcome to the word game"
+            end
 
-  end
+            def change_guess(array_in)
 
-  def define_variable(word)
-    @word = word
-    @split_word = word.split(//)
-    p @split_word
-    @is_over = false
-    @number_of_guess = @word.length
-    @wordlength = @word.length
-    @tries = 0
+                arrayword=@word.split(//)
+                guess=@current.split(//)
+                arrayword.each do |letter|
 
-  end
+                    if array_in==letter then
+                        guess[time]=array_in
+                    end
+                    time+=1
+                end
+                @current=guess.join
+
+            end
+
 
   def underscore
 
