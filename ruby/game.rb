@@ -30,24 +30,20 @@ class WordGame
 
             end
 
+            def letter_checker(letter)
+                    if @guess.index(letter) == nil then
+                        @guess+=letter
+                        @guess_numb+=1
+                        @too_many=(@guess_numb>=@max)
 
-  def underscore
 
+                        if @word.index(letter)!= nil then
+                            change_guess(letter)
+                            else
+                        end
+                    end
+                end
 
- end
-
- def guess_a_letter(letter)
-  @letter = letter
-  if  @split_word.include? @letter
-    puts "you got a letter right"
-     @tries +=1
-     @right_letter = @split_word.select{|a| a == @letter }
-     p @right_letter
-     p @right_letter
-  else
-   puts  "you got a letter wrong"
-    @tries +=1
-end
  # word_box = []
   #   @current =  "_"*@wordlength
    # @current_current = @current.chars
