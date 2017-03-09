@@ -44,42 +44,28 @@ class WordGame
                     end
                 end
 
- # word_box = []
-  #   @current =  "_"*@wordlength
-   # @current_current = @current.chars
-    #word_box  << @current_current
-    #p word_box
+                # driver
+                puts "Choose a word"
+                game=WordGame.new
+                game.save_word(gets.chomp)
+                50.times {puts"*"}
 
-    #split_word[index]
-
-    #@split_word.map!{ |x| x == @letter ? word_box : x }.flatten!
-
-  #@split_word.map!{ |x| x == @letter ? word_box : x }.flatten!
-  #p word_box
-  #p @split_word
-end
-
-#slice out the right letter
-#insert into word word_box by number index
-
-#def check_guess(tries)
- #   if @tries == @word.index
-  #    print "you lose!"
-   # else puts "keep going"
-  #  end
-  #end
-#end
+                loop do
+                puts "guesses left: #{game.current}"
+                remainding=game.max-game.guess_numb
+                puts "Guess a letter"
 
 
-# user interface
-puts "what word do you want to choose?"
-game = Word_game.new
-game.define_variable(gets.chomp)
-game.underscore
- puts "what letter do you want?"
-game.guess_a_letter(gets.chomp)
-#game.check_guess()
+                game.letter_checker(gets.chomp)
+                if game.current.index("_")==nil then
+                puts "You got it!"
+                break
+                elsif game.too_many
+                puts "you are a loser"
+                puts "You lose. Pay 25 cents and play again"
+                break
 
-#game.underscore
+            end
+            end
 
-end
+            end
