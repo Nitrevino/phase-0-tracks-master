@@ -1,11 +1,17 @@
 
-#Driver code
-#Welcome and ask for word
+class WordGame
+    attr_reader :guess,:current,:max,
+    :guess_numb,:too_many
 
-#Methods and class
-class Word_game
-  attr_reader :guess_count
-  attr_reader :is_over
+    def save_word(word)
+        @word=word
+        @max=word.length
+        @current="_"*@word.length
+        @guess=""
+        @guess_numb=0
+        @word
+        @too_many=false
+        time=0
 
   def initialize
       puts "welcome to the word game"
