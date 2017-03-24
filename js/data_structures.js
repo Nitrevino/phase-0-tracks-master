@@ -13,3 +13,23 @@ for (var i = 0; i < colors.length; i++) {
 }
 
 console.log(pretty_ponies);
+
+var car_car = {color: 'red', 'age': 7, sold_well: true};
+
+function vroomy_car(name, age, sold_well) {
+	// In this context, 'this' refers to
+	// the individual dog we're making
+	console.log("Our new dog:", this);
+
+
+	// Therefore, this.name is sort of the Ruby
+	// equivalent of @name
+	this.name = name;
+	this.age = age;
+	this.sold_well = sold_well;
+}
+
+console.log("Let's build a car ...");
+
+var anothercar = new vroomy_car("red", 8, false);
+console.log(anothercar);
