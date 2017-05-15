@@ -1,3 +1,6 @@
+I did this by myself, because I am behind and trying to catch up.
+
+
 var colors = ["Pink", "Princess Power Pink", "Less Pretty Pink", "yam Yellow",];
 colors.push("Mr. Whiskers");
 console.log(colors)
