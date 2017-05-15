@@ -3,15 +3,15 @@
 What are some of the key design philosophies of the Linux operating system?
 
 
-file system that people are familiar with
+  file system that people are familiar with
 
-Gives users control and respect by giving them flexibility and freedom
+  Gives users control and respect by giving them flexibility and freedom
 
-uses a terminal and shell
+  uses a terminal and shell
 
-Volunteer run and operated 
+  Volunteer run and operated 
 
-open ended 
+  open ended 
 
 In your own words, what is a VPS (virtual private server)? What, according to your research, are the advantages of using a VPS?
 
