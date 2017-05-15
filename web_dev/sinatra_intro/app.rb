@@ -44,3 +44,29 @@ get '/students/:id' do
   student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
   student.to_s
 end
+
+
+
+# /contact
+#
+get '/contact' do
+  'click here! <a href="mailto:info@iamanemail.com"> info </a>'
+end
+
+
+get '/great_job' do
+  name = params[:name]
+  if name then
+    response+="Good job, #{name}"
+  else
+    response+="Good job"
+  end
+
+end
+
+
+
+get '/:num1/plus/:num2' do
+  numeral=params.to_s
+  result=params[:num1].to_i+params[:num2].to_i
+  numeral+=params[:num1]+"+"+params[:num2]+"="+result.to_s
